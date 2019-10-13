@@ -93,7 +93,7 @@ class RandomWordState extends State<RandomWords> {
           if (index >= _suggestions.length) {
             int i = index;
             _suggestions.addAll(
-                generateWordPairs().take(10).map((wp) => new Item(i++, wp)));
+                generateWordPairs().take(10).map((wp) => Item(i++, wp)));
           }
           return _buildRow(_suggestions[index]);
         });
