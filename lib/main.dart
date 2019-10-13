@@ -28,7 +28,17 @@ class Item {
 
   Item(this.index, this.wp);
 
-  int get hashCode => index.hashCode + wp.hashCode;
+  int get hashCode {
+    int result = 17;
+
+    result *= 31;
+    result += index.hashCode;
+
+    result *= 31;
+    result += wp.hashCode;
+
+    return result;
+  }
 
   bool operator ==(other) {
     if (other is Item) {
