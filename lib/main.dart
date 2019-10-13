@@ -37,7 +37,7 @@ class Item {
     return false;
   }
 
-  String get dispValue => "${index}: ${wp.asPascalCase}";
+  String get dispValue => "$index: ${wp.asPascalCase}";
 }
 
 class RandomWordState extends State<RandomWords> {
